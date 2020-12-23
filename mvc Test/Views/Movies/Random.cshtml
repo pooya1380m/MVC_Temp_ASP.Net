@@ -1,0 +1,20 @@
+﻿@model mvc_Test.ViewModels.RandomMovieViewModel
+@{
+    ViewBag.Title = "Random";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.Movie.Name</h2>
+@if (Model.Custumers.Count == 0)
+{
+    <text>no one</text>
+}
+else
+{
+<ul>
+    @foreach (var customer in Model.Custumers)
+    {
+        <li>@customer.Name</li>
+    }
+</ul>
+}
